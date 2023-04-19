@@ -7,7 +7,12 @@ const start = async () => {
 	const faceMatcher = new faceapi.FaceMatcher(labeledFaceDescriptors, 0.6);
 	let uploadedImage;
 	let canvas;
-	document.body.append('Loaded');
+
+	const $loader = document.querySelector('.face-detection-loader');
+	$loader.classList.add('is-hidden');
+	$imageUpload.classList.replace('is-hidden', 'is-visible');
+	const $header = document.querySelector('.face-detection-header.is-hidden');
+	$header.classList.replace('is-hidden', 'is-visible');
 
 	// When you select an image
 	$imageUpload.addEventListener('change', async () => {
