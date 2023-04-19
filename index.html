@@ -8,11 +8,16 @@
 	<title>Face Recognition</title>
 </head>
 <body>
-	<input type="file" id="imageUpload">
 	<div class="face-detection-container">
-		
+		<input type="file" id="imageUpload" class="face-detection-input is-hidden">
+		<div class="face-detection-loader">
+			<h2 class="face-detection-header">Fetch Face API</h2>
+			<i class="fa-solid fa-spinner fa-spin-pulse face-detection-icon"></i>
+		</div>
+		<h2 class="face-detection-header is-hidden">Upload a Marvel image</h2>
 	</div>
 
+	<script src="https://kit.fontawesome.com/eed36a5c47.js" crossorigin="anonymous"></script>
 	<script defer src="./scripts/faceApi.min.js"></script>
 	<script defer src="./scripts/main.js"></script>
 </body>
