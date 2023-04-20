@@ -9,12 +9,25 @@
 </head>
 <body>
 	<div class="face-detection-container">
-		<input type="file" id="imageUpload" class="face-detection-input is-hidden">
+		<div class="face-detection-upload is-hidden">
+			<div class="upload-container">
+				<h2 class="face-detection-header">Upload an image</h2>
+				<input type="file" id="imageUpload" class="face-detection-input">
+				<p class="paragraph">
+					This only works with images from these hero's: Black Widow, Captain America, Captain Marvel, Hawkeye, Jim Rhodes, Thor and Tony Stark.
+				</p>
+				<p class="paragraph">
+					Others will be seen as "unkown".
+				</p>
+			</div>
+			<div class="uploaded-image-container">
+				<img class="uploaded-img" src="" alt="">
+			</div>
+		</div>
 		<div class="face-detection-loader">
 			<h2 class="face-detection-header">Fetch Face API</h2>
 			<i class="fa-solid fa-spinner fa-spin-pulse face-detection-icon"></i>
 		</div>
-		<h2 class="face-detection-header is-hidden">Upload a Marvel image</h2>
 	</div>
 
 	<script src="https://kit.fontawesome.com/eed36a5c47.js" crossorigin="anonymous"></script>
