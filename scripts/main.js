@@ -1,18 +1,18 @@
 const $imageUpload = document.getElementById('imageUpload');
 
 const start = async () => {
-	const $container = document.querySelector('.face-detection-container');
+	const $container = document.querySelector('.uploaded-image-container');
 	const labeledFaceDescriptors = await loadLabeledImages();
 	// 0.6 is the 60% percent value that we need in order to recognize a face as a character
 	const faceMatcher = new faceapi.FaceMatcher(labeledFaceDescriptors, 0.6);
 	let uploadedImage;
 	let canvas;
 
+	// Hide loading state after the promise is solved
 	const $loader = document.querySelector('.face-detection-loader');
 	$loader.classList.add('is-hidden');
-	$imageUpload.classList.replace('is-hidden', 'is-visible');
-	const $header = document.querySelector('.face-detection-header.is-hidden');
-	$header.classList.replace('is-hidden', 'is-visible');
+	const $upload = document.querySelector('.face-detection-upload');
+	$upload.classList.remove('is-hidden');
 
 	// When you select an image
 	$imageUpload.addEventListener('change', async () => {
@@ -20,12 +20,15 @@ const start = async () => {
 		if (canvas) { canvas.remove(); };
 		// Get uploaded image
 		uploadedImage = await faceapi.bufferToImage($imageUpload.files[0]);
+		const $image = document.querySelector('.uploaded-img');
+		console.log('uploaded img data', uploadedImage)
+		$image.src = uploadedImage.src;
 
 		// Display image and canvas on top of the image
-		$container.append(uploadedImage);
-		canvas = faceapi.createCanvasFromMedia(uploadedImage);
+		// $container.append(uploadedImage);
+		canvas = faceapi.createCanvasFromMedia($image);
 		$container.append(canvas);
-		const displaySize = { width: uploadedImage.width, height: uploadedImage.height };
+		const displaySize = { width: $image.width, height: $image.height };
 		// Resize canvas
 		faceapi.matchDimensions(canvas, displaySize);
 

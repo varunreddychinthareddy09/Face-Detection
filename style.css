@@ -9,13 +9,8 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-canvas {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
 .face-detection-container {
+  background-image: url("https://wallpaperaccess.com/full/3142820.jpg");
   position: relative;
   width: 100vw;
   height: 100vh;
@@ -25,9 +20,53 @@ canvas {
   flex-direction: column;
 }
 
+.face-detection-upload {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.upload-container {
+  color: #000000;
+  background: #FFFFFF;
+  padding: 2rem;
+  width: 20rem;
+  border-radius: 25px;
+  box-shadow: 3px 3px 16px #000000;
+}
+
+.face-detection-input {
+  margin-bottom: 1.5rem;
+}
+
+.paragraph {
+  color: rgb(110, 110, 110);
+  font-size: 0.75rem;
+}
+
+.paragraph :first-child {
+  margin-bottom: 1rem;
+}
+
+.uploaded-image-container {
+  position: relative;
+  width: 650px;
+}
+
+.uploaded-img {
+  width: 100%;
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
 .face-detection-loader {
   display: flex;
   flex-direction: column;
+  color: #FFFFFF;
 }
 
 .face-detection-header {
