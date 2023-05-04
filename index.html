@@ -8,30 +8,30 @@
 	<title>Face Recognition</title>
 </head>
 <body>
-	<div class="face-detection-container">
-		<div class="face-detection-upload is-hidden">
+	<div class="face-recognition-container">
+		<div class="face-recognition-upload is-hidden">
 			<div class="upload-container">
-				<h2 class="face-detection-header">Upload an image</h2>
-				<input type="file" id="imageUpload" class="face-detection-input">
+				<h2 class="title">Upload an image</h2>
+				<input type="file" id="imageUpload" class="face-recognition-input">
 				<p class="paragraph">
 					This only works with images from these hero's: Black Widow, Captain America, Captain Marvel, Hawkeye, Jim Rhodes, Thor and Tony Stark.
-				</p>
-				<p class="paragraph">
 					Others will be seen as "unkown".
 				</p>
+				<h2 class="title">Curious about face detection?</h2>
+				<a class="button" type="button" title="Try face detection!" href="face-detection.html">Try it!</a>
 			</div>
 			<div class="uploaded-image-container">
 				<img class="uploaded-img" src="" alt="">
 			</div>
 		</div>
-		<div class="face-detection-loader">
-			<h2 class="face-detection-header">Fetch Face API</h2>
-			<i class="fa-solid fa-spinner fa-spin-pulse face-detection-icon"></i>
+		<div class="face-recognition-loader">
+			<h2 class="title">Fetch Face API</h2>
+			<i class="fa-solid fa-spinner fa-spin-pulse face-recognition-icon"></i>
 		</div>
 	</div>
 
 	<script src="https://kit.fontawesome.com/eed36a5c47.js" crossorigin="anonymous"></script>
 	<script defer src="./scripts/faceApi.min.js"></script>
-	<script defer src="./scripts/main.js"></script>
+	<script type="module" defer src="./scripts/main.js"></script>
 </body>
 </html>
