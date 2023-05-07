@@ -1,3 +1,12 @@
-import { faceDetection } from './faceRecognition.js';
+import { faceRecognition } from './faceRecognition.js';
+import { faceDetection } from './faceDetection.js';
 
-faceDetection();
+// Execute
+const $faceRecognitionContainer = document.querySelector('.face-recognition-container');
+if ($faceRecognitionContainer) {
+	faceRecognition();
+}
+const $faceDetectionContainer = document.querySelector('.face-detection-container');
+if ($faceDetectionContainer) {
+	faceDetection();
+}

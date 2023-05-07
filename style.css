@@ -9,7 +9,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.face-recognition-container {
+.background {
   background-image: url("https://wallpaperaccess.com/full/3142820.jpg");
   position: relative;
   width: 100vw;
@@ -17,6 +17,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+/* Face recognition styling */
+.face-recognition-container {
   flex-direction: column;
 }
 
@@ -56,6 +60,9 @@ body {
 
 canvas {
   position: absolute;
+}
+
+.face-recognition-container canvas {
   top: 0;
   right: 0;
 }

@@ -48,7 +48,7 @@ const start = async () => {
 	})
 }
 
-const faceDetection = () => {
+const faceRecognition = () => {
 	const URL = './models';
 	Promise.all([
 		// Select the library from the API which you want to use, for example: faceRecognitionNet
@@ -82,4 +82,4 @@ const loadLabeledImages = () => {
 	);
 };
 
-export { faceDetection };
+export { faceRecognition };
